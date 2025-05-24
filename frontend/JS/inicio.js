@@ -49,5 +49,5 @@ cerrarSesion.addEventListener("click", (e) => {
   // Aquí puedes poner la lógica real para cerrar sesión, por ejemplo:
   alert("Sesión cerrada. Volviendo a la página de login.");
   // Redirigir a login (si tienes página de login)
-  window.location.href = "login.html";
+  window.location.href = "/frontend/HTML/login.html";
 });
