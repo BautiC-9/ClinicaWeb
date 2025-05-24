@@ -11,6 +11,7 @@ const secciones = {
   `,
   turnos: `
     <h1>Turnos</h1>
+    
     <p>Aquí puedes gestionar los turnos.</p>
   `,
   pacientes: `
@@ -47,7 +48,7 @@ menuLinks.forEach((link) => {
 cerrarSesion.addEventListener("click", (e) => {
   e.preventDefault();
   // Aquí puedes poner la lógica real para cerrar sesión, por ejemplo:
-  alert("Sesión cerrada. Volviendo a la página de login.");
+  //alert("Sesión cerrada. Volviendo a la página de login.");
   // Redirigir a login (si tienes página de login)
   window.location.href = "/frontend/HTML/login.html";
 });

@@ -1,0 +1,64 @@
+#agregar-turno {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#agregar-turno:hover {
+  background-color: #45a049;
+}
+
+#tabla-turnos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tabla-turnos th, #tabla-turnos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tabla-turnos th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.editar-turno {
+  background-color: #2196F3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editar-turno:hover {
+  background-color: #0b7dda;
+}
+
+.eliminar-turno {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editar-turno:hover {
+  background-color: #0b7dda;
+}
+
+.eliminar-turno {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.eliminar-turno:hover {
+  background-color: #da190b;
+}
