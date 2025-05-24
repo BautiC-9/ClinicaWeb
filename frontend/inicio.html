@@ -4,70 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel Principal</title>
-    <style>
-      /* Reset básico */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body,
-      html {
-        height: 100%;
-        font-family: Arial, sans-serif;
-      }
-
-      /* Contenedor principal flex */
-      .container {
-        display: flex;
-        height: 100vh;
-      }
-
-      /* Menú lateral */
-      nav {
-        width: 200px;
-        background-color: #2c3e50;
-        color: white;
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      nav ul {
-        list-style: none;
-      }
-
-      nav ul li {
-        margin: 15px 0;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: block;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      nav ul li a:hover,
-      nav ul li a.active {
-        background-color: #34495e;
-      }
-
-      /* Contenido principal */
-      main {
-        flex-grow: 1;
-        padding: 40px;
-        background-color: #ecf0f1;
-      }
-
-      main h1 {
-        color: #34495e;
-        font-size: 2em;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -78,6 +15,11 @@
           <li><a href="#" id="menu-pacientes">Pacientes</a></li>
           <li><a href="#" id="menu-informes">Informes</a></li>
           <li><a href="#" id="menu-configuracion">Configuración</a></li>
+          <li>
+            <a href="#" id="cerrar-sesion" class="cerrar-sesion"
+              >Cerrar sesión</a
+            >
+          </li>
         </ul>
       </nav>
       <main id="contenido-principal">
@@ -86,55 +28,6 @@
       </main>
     </div>
 
-    <script>
-      // Referencias a elementos
-      const contenido = document.getElementById("contenido-principal");
-      const menuLinks = document.querySelectorAll("nav ul li a");
-
-      // Contenido para cada sección
-      const secciones = {
-        inicio: `
-        <h1>Bienvenido</h1>
-        <p>Contenido según el rol del usuario...</p>
-      `,
-        turnos: `
-        <h1>Turnos</h1>
-        <p>Aquí puedes gestionar los turnos.</p>
-      `,
-        pacientes: `
-        <h1>Pacientes</h1>
-        <p>Listado y gestión de pacientes.</p>
-      `,
-        informes: `
-        <h1>Informes</h1>
-        <p>Visualización de informes médicos.</p>
-      `,
-        configuracion: `
-        <h1>Configuración</h1>
-        <p>Opciones para configurar el sistema.</p>
-      `,
-      };
-
-      // Función para cambiar contenido y activar el link
-      function cambiarContenido(seccion) {
-        // Cambiar contenido principal
-        contenido.innerHTML = secciones[seccion];
-
-        // Quitar clase active de todos los links
-        menuLinks.forEach((link) => link.classList.remove("active"));
-
-        // Agregar clase active al link seleccionado
-        document.getElementById("menu-" + seccion).classList.add("active");
-      }
-
-      // Añadir eventos a cada link del menú
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const id = e.target.id.replace("menu-", "");
-          cambiarContenido(id);
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
