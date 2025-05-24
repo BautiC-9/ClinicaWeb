@@ -4,33 +4,19 @@ const menuLinks = document.querySelectorAll("nav ul li a:not(.cerrar-sesion)");
 const cerrarSesion = document.getElementById("cerrar-sesion");
 
 // Contenido para cada sección
+// Colocados los href de cada sección!!!!!
+// en el objeto secciones para que al hacer click vaya correctamente al html file
 const secciones = {
-  inicio: `
-    <h1>Bienvenido</h1>
-    <p>Contenido según el rol del usuario...</p>
-  `,
-  turnos: `
-    <h1>Turnos</h1>
-    
-    <p>Aquí puedes gestionar los turnos.</p>
-  `,
-  pacientes: `
-    <h1>Pacientes</h1>
-    <p>Listado y gestión de pacientes.</p>
-  `,
-  informes: `
-    <h1>Informes</h1>
-    <p>Visualización de informes médicos.</p>
-  `,
-  configuracion: `
-    <h1>Configuración</h1>
-    <p>Opciones para configurar el sistema.</p>
-  `,
+  inicio: () => location.href = "/frontend/HTML/inicio.html",
+  turnos: () => location.href = "/frontend/HTML/turnos.html",
+  pacientes: () => location.href = "/frontend/HTML/pacientes.html",
+  informes: () => location.href = "/frontend/HTML/informes.html",
+  configuracion: () => location.href = "/frontend/HTML/configuracion.html",
 };
 
 // Función para cambiar contenido y activar el link
 function cambiarContenido(seccion) {
-  contenido.innerHTML = secciones[seccion];
+  contenido.innerHTML = secciones[seccion]();
   menuLinks.forEach((link) => link.classList.remove("active"));
   document.getElementById("menu-" + seccion).classList.add("active");
 }
