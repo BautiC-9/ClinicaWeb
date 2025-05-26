@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 clinica-app/
 │
 ├── public/
@@ -63,7 +62,3 @@ return res.status(500).send("Error en el servidor");
 
 module.exports = router;
 
-=======
-# ClinicaWeb
-proyecto web para la clinica salud total
->>>>>>> f04db1c746e44bf234291dd2d5536e86456dfb5c

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-clinica-app/
-│
-├── public/
-│ └── Paciente/
-│ └── paceinte.css
-│
-├── views/
-│ └── index.html ← (tu HTML va acá)
-│
-├── db/
-│ └── conexion.js ← conexión a MySQL
-│
-├── routes/
-│ └── auth.js ← rutas para login/registro
-│
-├── app.js ← servidor principal
-├── package.json
-
 // routes/auth.js
 const express = require("express");
 const router = express.Router();
@@ -62,8 +43,3 @@ return res.status(500).send("Error en el servidor");
 });
 
 module.exports = router;
-
-=======
-# ClinicaWeb
-proyecto web para la clinica salud total
->>>>>>> f04db1c746e44bf234291dd2d5536e86456dfb5c
