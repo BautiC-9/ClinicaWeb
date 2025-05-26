@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 // Rutas
-const authRoutes = require("./routes/auth");
+const authRoutes = require("./routes/auth.js");
 app.use("/", authRoutes); // para login y registro
 
 // Iniciar servidor
