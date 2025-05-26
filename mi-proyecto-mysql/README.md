@@ -1,4 +1,22 @@
-/ routes/auth.js
+clinica-app/
+│
+├── public/
+│ └── Paciente/
+│ └── paceinte.css
+│
+├── views/
+│ └── index.html ← (tu HTML va acá)
+│
+├── db/
+│ └── conexion.js ← conexión a MySQL
+│
+├── routes/
+│ └── auth.js ← rutas para login/registro
+│
+├── app.js ← servidor principal
+├── package.json
+
+// routes/auth.js
 const express = require("express");
 const router = express.Router();
 const conexion = require("../db/conexion");
@@ -43,3 +61,4 @@ return res.status(500).send("Error en el servidor");
 });
 
 module.exports = router;
+
